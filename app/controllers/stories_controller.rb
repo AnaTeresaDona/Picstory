@@ -7,9 +7,14 @@ class StoriesController < ApplicationController
     @stories = Story.all
   end
 
+  def my_stories
+    @stories = Story.where(user_id: current_user.id)
+  end
+
   # GET /stories/1
   # GET /stories/1.json
   def show
+    
   end
 
   # GET /stories/new
