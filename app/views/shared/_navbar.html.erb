@@ -20,7 +20,7 @@
           <ul class="dropdown-menu">
           <% if current_user %>
             <li><%=link_to 'Create PicStory', new_story_path %></li>
-            <li><%=link_to 'My PicStories', my_stories_path %></li>
+            <li><%=link_to 'My PicStories', user_path(current_user) %></li>
             <li><%=link_to 'My Profile', user_path(current_user) %></li>
             <li role="separator" class="divider"></li>
             <li><%=link_to 'Sign Out', sessions_destroy_path, method: :delete %></li>

@@ -1,11 +1,11 @@
 module ApplicationHelper
 
-    # def current_user
-    #     User.find_by(id: session[:user_id])
-    # end
+    def current_user
+        User.find_by(id: session[:user_id])
+    end
 
-    # def logged?
-    #     !current_user.nil?
-    #     #current_user ? true : false
-    # end
+    def logged?
+        !current_user.nil?
+        #current_user ? true : false
+    end
 end
